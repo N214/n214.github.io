@@ -6,7 +6,18 @@
     <description>Recent content in Posts on Example Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 09 Sep 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://www.nicota.tk/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 14 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://www.nicota.tk/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to use xargs</title>
+      <link>https://www.nicota.tk/p/how-to-use-xargs/</link>
+      <pubDate>Wed, 14 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.nicota.tk/p/how-to-use-xargs/</guid>
+      <description>What is xargs? xargs is a UNIX command line utility for bulding an execution pipeline from stdin (standard input). xargs can be used with any command that need the stdin as argument such as echo, mkdir, rm to cite the simplest command
+Illustration The default behavior of xargs is to take items from the stdin and execute a command once for every argument.
+In this following example xargs takes the output of the command echo and pipes the output as arguments for the command mkdir.</description>
+    </item>
+    
     <item>
       <title>Chinese Test</title>
       <link>https://www.nicota.tk/p/test-chinese/</link>

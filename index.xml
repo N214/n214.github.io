@@ -6,7 +6,33 @@
         <description>Recent content on Example Site</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Wed, 09 Sep 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://www.nicota.tk/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 14 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://www.nicota.tk/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>How to use xargs</title>
+        <link>https://www.nicota.tk/p/how-to-use-xargs/</link>
+        <pubDate>Wed, 14 Apr 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://www.nicota.tk/p/how-to-use-xargs/</guid>
+        <description>&lt;img src="https://www.nicota.tk/linux.jpg" alt="Featured image of post How to use xargs" /&gt;&lt;h2 id=&#34;what-is-xargs&#34;&gt;What is xargs?&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;xargs&lt;/code&gt; is a UNIX command line utility for bulding an execution pipeline from &lt;code&gt;stdin&lt;/code&gt; (standard input). &lt;code&gt;xargs&lt;/code&gt; can be used with any command that need the &lt;code&gt;stdin&lt;/code&gt; as argument such as &lt;code&gt;echo&lt;/code&gt;, &lt;code&gt;mkdir&lt;/code&gt;, &lt;code&gt;rm&lt;/code&gt; to cite the simplest command&lt;/p&gt;
+&lt;h2 id=&#34;illustration&#34;&gt;Illustration&lt;/h2&gt;
+&lt;p&gt;The default behavior of &lt;code&gt;xargs&lt;/code&gt; is to take items from the &lt;code&gt;stdin&lt;/code&gt; and execute a command once for every argument.&lt;/p&gt;
+&lt;p&gt;In this following example &lt;code&gt;xargs&lt;/code&gt; takes the output of the command &lt;code&gt;echo&lt;/code&gt; and pipes the output as arguments for the command &lt;code&gt;mkdir&lt;/code&gt;. In the example below, we end up with 3 new directories one, two and three.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;one, two, three&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; xargs mkdir
+ls
+one two tree
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;xargs-common-used-options&#34;&gt;xargs&#39; common used options&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;-p, ---interactive&lt;/code&gt;
+Prompt the user about whether to run each command line and read a line from the terminal.  Only run the command line if the response starts with  &lt;code&gt;y&#39;  or  &lt;/code&gt;Y&#39;. Implies -t.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;-r, --no-run-if-empty&lt;/code&gt;
+If  the  standard input does not contain any nonblanks, do not run the command. Normally, the command is run once even if there is no input.  This option is  a GNU extension.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;-o, --open-tty&lt;/code&gt;
+Reopen stdin as /dev/tty in the child process  before  executing  the  command. This is useful if you want xargs to run an interactive application.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;--delimiter=delim, -d delim&lt;/code&gt;
+Input items are terminated by the specified character.  The specified delimiter may be a single character, a C-style character escape such as \n, or  an  octal or  hexadecimal escape code.&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>Chinese Test</title>
         <link>https://www.nicota.tk/p/test-chinese/</link>
         <pubDate>Wed, 09 Sep 2020 00:00:00 +0000</pubDate>
@@ -236,9 +262,13 @@
     &gt;Privacy Config&lt;/a&gt; and a set of Simple Shortcodes that enable static and no-JS versions of various social media embeds.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;youtube-privacy-enhanced-shortcode&#34;&gt;YouTube Privacy Enhanced Shortcode&lt;/h2&gt;
-
-&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
-  &lt;iframe loading=&#34;lazy&#34; src=&#34;https://www.youtube.com/embed/ZJthWmvUzzc&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;div class=&#34;video-wrapper&#34;&gt;
+    &lt;iframe loading=&#34;lazy&#34; 
+            src=&#34;https://www.youtube.com/embed/ZJthWmvUzzc&#34; 
+            allowfullscreen 
+            title=&#34;YouTube Video&#34;
+    &gt;
+    &lt;/iframe&gt;
 &lt;/div&gt;
 
 &lt;!-- raw HTML omitted --&gt;
