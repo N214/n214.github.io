@@ -12,7 +12,7 @@
         <pubDate>Wed, 14 Apr 2021 00:00:00 +0000</pubDate>
         
         <guid>https://www.nicota.tk/p/how-to-use-xargs/</guid>
-        <description>&lt;img src="https://www.nicota.tk/p/how-to-use-xargs/linux.jpeg" alt="Featured image of post How to use xargs" /&gt;&lt;h2 id=&#34;what-is-xargs&#34;&gt;What is xargs?&lt;/h2&gt;
+        <description>&lt;h2 id=&#34;what-is-xargs&#34;&gt;What is xargs?&lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;xargs&lt;/code&gt; is a UNIX command line utility for bulding an execution pipeline from &lt;code&gt;stdin&lt;/code&gt; (standard input). &lt;code&gt;xargs&lt;/code&gt; can be used with any command that need the &lt;code&gt;stdin&lt;/code&gt; as argument such as &lt;code&gt;echo&lt;/code&gt;, &lt;code&gt;mkdir&lt;/code&gt;, &lt;code&gt;rm&lt;/code&gt; to cite the simplest command&lt;/p&gt;
 &lt;h2 id=&#34;illustration&#34;&gt;Illustration&lt;/h2&gt;
 &lt;p&gt;The default behavior of &lt;code&gt;xargs&lt;/code&gt; is to take items from the &lt;code&gt;stdin&lt;/code&gt; and execute a command once for every argument.&lt;/p&gt;
