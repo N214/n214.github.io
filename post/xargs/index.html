@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="This post shows how to use xargs in a shell script">
+<meta name="generator" content="Hugo 0.82.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/css/style.css" type="text/css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700" type="text/css">
+<link rel="alternate" href="/index.xml" type="application/rss+xml" title="Blog">
+<title>How to use xargs - Blog</title>
+</head>
+<body>
+
+<header>
+  <div class="container clearfix">
+    <a class="path" href="https://www.nicota.tk/">[Blog]</a>
+    <span class="caret"># _</span>
+    <div class="right">
+      
+    </div>
+  </div>
+</header>
+
+<div class="container">
+
+
+<main role="main" class="article">
+  
+<article class="single" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="meta">
+
+    <span class="key">published on</span>
+    <span class="val"><time itemprop="datePublished" datetime="2021-04-14">April 14, 2021</time></span>
+
+
+    <span class="key">in</span>
+    <span class="val">
+
+        <a href="/categories/linux">Linux</a>
+
+    </span>
+
+
+  </div>
+  <h1 class="headline" itemprop="headline">How to use xargs</h1>
+  <section class="body" itemprop="articleBody">
+    <h2 id="what-is-xargs">What is xargs?</h2>
+<p><code>xargs</code> is a UNIX command line utility for bulding an execution pipeline from <code>stdin</code> (standard input). <code>xargs</code> can be used with any command that need the <code>stdin</code> as argument such as <code>echo</code>, <code>mkdir</code>, <code>rm</code> to cite the simplest command</p>
+<h2 id="illustration">Illustration</h2>
+<p>The default behavior of <code>xargs</code> is to take items from the <code>stdin</code> and execute a command once for every argument.</p>
+<p>In this following example <code>xargs</code> takes the output of the command <code>echo</code> and pipes the output as arguments for the command <code>mkdir</code>. In the example below, we end up with 3 new directories one, two and three.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">echo <span style="color:#e6db74">&#34;one, two, three&#34;</span> | xargs mkdir
+ls
+one two tree
+
+</code></pre></div><h2 id="xargs-common-used-options">xargs' common used options</h2>
+<p><code>-p, ---interactive</code>
+Prompt the user about whether to run each command line and read a line from the terminal.  Only run the command line if the response starts with  <code>y'  or  </code>Y'. Implies -t.</p>
+<p><code>-r, --no-run-if-empty</code>
+If  the  standard input does not contain any nonblanks, do not run the command. Normally, the command is run once even if there is no input.  This option is  a GNU extension.</p>
+<p><code>-o, --open-tty</code>
+Reopen stdin as /dev/tty in the child process  before  executing  the  command. This is useful if you want xargs to run an interactive application.</p>
+<p><code>--delimiter=delim, -d delim</code>
+Input items are terminated by the specified character.  The specified delimiter may be a single character, a C-style character escape such as \n, or  an  octal or  hexadecimal escape code.</p>
+
+  </section>
+</article>
+
+</main>
+
+</div>
+
+<footer>
+  <div class="container">
+    <span class="copyright">&copy; 2021 Blog - <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></span>
+  </div>
+</footer>
+
+</body>
+</html>
+
